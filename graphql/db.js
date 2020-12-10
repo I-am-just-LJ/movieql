@@ -47,3 +47,13 @@ export const getById = (id) => {
   const filteredPeople = people.filter((person) => people.id === String(id));
   return filteredPeople[0];
 };
+
+export const deleteMovie = (id) => {
+  const cleanedMovies = movies.filter((movie) => movie.id !== String(id));
+  if (movies.length > cleanedMovies.length) {
+    movie = cleanedMovies;
+    return true;
+  } else {
+    return false;
+  }
+};
