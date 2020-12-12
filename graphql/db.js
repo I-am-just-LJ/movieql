@@ -44,12 +44,12 @@ export const people = [
 ];
 
 export const getById = (id) => {
-  const filteredPeople = people.filter((person) => people.id === String(id));
+  const filteredPeople = people.filter((person) => people.id === id);
   return filteredPeople[0];
 };
 
 export const deleteMovie = (id) => {
-  const cleanedMovies = movies.filter((movie) => movie.id !== String(id));
+  const cleanedMovies = movies.filter((movie) => movie.id !== id);
   if (movies.length > cleanedMovies.length) {
     movie = cleanedMovies;
     return true;
